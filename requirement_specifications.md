@@ -75,20 +75,19 @@ The following testing-related tasks must be implemented:
     Implement continuous testing by running all unit and integration tests in the CI process
     Design and write end-to-end test(s) in Selenium WebDriver, Cypress, Playwright or similar (not Selenium IDE)
 
-Delivery
+## Delivery
 
 The assignment must be delivered here in Itslearning in one zip file by 6 April 2026, 23:59:
 
-    The source code of the application, if different from the code provided
-    The database creation and population script if different from the one provided
-    The source code of the unit tests, integration tests in code, and end-to-end tests
-    The CI configuration files       
-    (YAML, XML or whatever format the CI tool uses. A screenshot is also acceptable)
-    A pdf file laying out the use of black-box design techniques to find out test cases
+- The source code of the application, if different from the code provided
+- The database creation and population script if different from the one provided
+- The source code of the unit tests, integration tests in code, and end-to-end tests
+- The CI configuration files (YAML, XML or whatever format the CI tool uses. A screenshot is also acceptable)
+- A pdf file laying out the use of black-box design techniques to find out test cases
     (e.g., definition of valid and non-valid partitions, boundary values, decision tables if applicable…)
-    Screenshots of the static testing tool(s) used that show the value they brought to the testing activities
+- Screenshots of the static testing tool(s) used that show the value they brought to the testing activities
 
-Presentation
+## Presentation
 
 On 7 April 2026 each group will make a presentation where they will show and explain the whole assignment to the rest of the class:
 
