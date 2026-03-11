@@ -13,15 +13,19 @@ Denne guide hjælper dig med at starte alle services og prøve applikationen.
 
 ## Trin 0: Tjek at Docker kører
 
-Inden du går videre, skal Docker Desktop være startet. Verificer med:
+Inden du går videre, skal **Docker Desktop** være startet (åbn programmet og vent til ikonet i menulinjen er stabilt og ikke spinner).
+
+Verificer at Docker er klar:
 
 ```bash
-docker info
+docker ps
 ```
 
-Hvis du ser output med serverinfo, er Docker klar. Hvis du får en fejl som `Cannot connect to the Docker daemon`, skal du starte Docker Desktop manuelt og vente til ikonet i menulinjen ikke spinner mere.
+Hvis du ser en (muligvis tom) tabel med `CONTAINER ID`, `IMAGE`, osv., er Docker klar. Hvis du får en fejl som `Cannot connect to the Docker daemon`, skal du starte Docker Desktop og vente til det er fuldt startet.
 
-Du kan også tjekke Docker Compose virker:
+> **macOS-brugere:** `docker info` kan give fejl eller uventet output på Docker Desktop for Mac. Brug `docker ps` i stedet for at verificere at Docker kører.
+
+Tjek også at Docker Compose virker:
 
 ```bash
 docker compose version
