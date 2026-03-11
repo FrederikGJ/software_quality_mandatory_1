@@ -2,4 +2,4 @@
 
 ## Personal Test Data Generator
 
-For krav specs se: 
+For krav specs fra Arturo se: [Kravspecifikationer](requirement_specifications.md)
