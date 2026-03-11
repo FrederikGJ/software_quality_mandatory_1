@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake Person Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Fake Person Generator</h1>
+        <p>Generer tilfældig fake-information om ikke-eksisterende danske personer</p>
+    </header>
+
+    <main>
+        <section class="controls">
+            <div class="button-group">
+                <button onclick="fetchData('/api/cpr')">CPR-nummer</button>
+                <button onclick="fetchData('/api/name-gender')">Navn & Køn</button>
+                <button onclick="fetchData('/api/name-gender-dob')">Navn, Køn & Fødselsdato</button>
+                <button onclick="fetchData('/api/cpr-name-gender')">CPR, Navn & Køn</button>
+                <button onclick="fetchData('/api/cpr-name-gender-dob')">CPR, Navn, Køn & Fødselsdato</button>
+                <button onclick="fetchData('/api/address')">Adresse</button>
+                <button onclick="fetchData('/api/phone')">Mobilnummer</button>
+                <button onclick="fetchData('/api/person')">Fuld Person</button>
+            </div>
+
+            <div class="bulk-controls">
+                <label for="bulkCount">Antal personer (2-100):</label>
+                <input type="number" id="bulkCount" min="2" max="100" value="5">
+                <button onclick="fetchBulk()">Generer Bulk</button>
+            </div>
+        </section>
+
+        <section id="result" class="result hidden"></section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

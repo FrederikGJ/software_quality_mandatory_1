@@ -1,0 +1,192 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: #f0f2f5;
+    color: #1a1a2e;
+    min-height: 100vh;
+}
+
+header {
+    background: #1a1a2e;
+    color: #fff;
+    padding: 2rem;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    color: #a0a0b8;
+    font-size: 0.95rem;
+}
+
+main {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.controls {
+    background: #fff;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    margin-bottom: 1.5rem;
+}
+
+.button-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.button-group button {
+    padding: 0.6rem 1.2rem;
+    border: none;
+    background: #1a1a2e;
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background 0.2s;
+}
+
+.button-group button:hover {
+    background: #16213e;
+}
+
+.button-group button:active {
+    background: #0f3460;
+}
+
+.bulk-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+}
+
+.bulk-controls label {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.bulk-controls input {
+    width: 80px;
+    padding: 0.5rem;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.bulk-controls button {
+    padding: 0.6rem 1.2rem;
+    border: none;
+    background: #0f3460;
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background 0.2s;
+}
+
+.bulk-controls button:hover {
+    background: #1a1a2e;
+}
+
+.result {
+    background: #fff;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    animation: fadeIn 0.3s ease;
+}
+
+.result.hidden {
+    display: none;
+}
+
+.result h2 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: #1a1a2e;
+}
+
+.person-card {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 0.75rem;
+    border-left: 4px solid #0f3460;
+}
+
+.person-card:last-child {
+    margin-bottom: 0;
+}
+
+.field {
+    display: flex;
+    padding: 0.3rem 0;
+}
+
+.field-label {
+    font-weight: 600;
+    min-width: 140px;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+.field-value {
+    font-size: 0.9rem;
+}
+
+.address-block {
+    margin-top: 0.25rem;
+    padding-left: 0;
+}
+
+.error {
+    color: #e74c3c;
+    font-weight: 500;
+}
+
+.loading {
+    text-align: center;
+    color: #888;
+    padding: 1rem;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 600px) {
+    .button-group {
+        flex-direction: column;
+    }
+
+    .bulk-controls {
+        flex-wrap: wrap;
+    }
+
+    .field {
+        flex-direction: column;
+    }
+
+    .field-label {
+        min-width: unset;
+        margin-bottom: 0.1rem;
+    }
+}
