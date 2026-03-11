@@ -1,5 +1,8 @@
 USE fake_person;
 
+GRANT ALL PRIVILEGES ON fake_person.* TO 'user'@'%';
+FLUSH PRIVILEGES;
+
 CREATE TABLE IF NOT EXISTS postal_code (
     postal_code CHAR(4) NOT NULL,
     town_name VARCHAR(30) NOT NULL,
