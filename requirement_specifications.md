@@ -1,8 +1,8 @@
-Personal Test Data Generator
+# Personal Test Data Generator
 
 Design and implement unit, integration and end-to-end tests for an application that generates fake personal data for application tests. It must be developed in groups of 4 or 5 students. If there are major circumstances that prevent you from working in groups, request a dispensation from Head of Education Marc Kluge (klu@ek.dk). Please create the groups and write your names in the Excel sheet Groups – First Mandatory Assignment.xlsx in Microsoft Teams.
 
-System under test
+## System under test
 
 The application generates fake information for non-existing Danish persons with the following architecture:
 
