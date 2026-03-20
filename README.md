@@ -5,3 +5,5 @@
 For krav specs fra Arturo se: [Kravspecifikationer](requirement_specifications.md)
 
 kør backend: mvn spring-boot:run
+
+frontend - bare åben index.html filen der ligger i frontend mappen.
