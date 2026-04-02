@@ -1,0 +1,693 @@
+{
+  "info": {
+    "name": "FakePersonController – Ækvivalenspartitioner",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:8080"
+    }
+  ],
+  "item": [
+    {
+      "name": "1. Parameterløse GET-endpoints",
+      "item": [
+        {
+          "name": "T1-T3: GET /api/cpr",
+          "request": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/cpr"
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('T1: Status er 200 OK', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "",
+                  "pm.test('T2: Response body er ikke tom', function () {",
+                  "    pm.expect(pm.response.text()).to.not.be.empty;",
+                  "});",
+                  "",
+                  "pm.test('T3: Content-Type er application/json', function () {",
+                  "    pm.expect(pm.response.headers.get('Content-Type')).to.include('application/json');",
+                  "});"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "T1-T3: GET /api/name-gender",
+          "request": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/name-gender"
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('T1: Status er 200 OK', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "pm.test('T2: Response body er ikke tom', function () {",
+                  "    pm.expect(pm.response.text()).to.not.be.empty;",
+                  "});",
+                  "pm.test('T3: Content-Type er application/json', function () {",
+                  "    pm.expect(pm.response.headers.get('Content-Type')).to.include('application/json');",
+                  "});"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "T1-T3: GET /api/name-gender-dob",
+          "request": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/name-gender-dob"
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('T1: Status er 200 OK', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "pm.test('T2: Response body er ikke tom', function () {",
+                  "    pm.expect(pm.response.text()).to.not.be.empty;",
+                  "});",
+                  "pm.test('T3: Content-Type er application/json', function () {",
+                  "    pm.expect(pm.response.headers.get('Content-Type')).to.include('application/json');",
+                  "});"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "T1-T3: GET /api/cpr-name-gender",
+          "request": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/cpr-name-gender"
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('T1: Status er 200 OK', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "pm.test('T2: Response body er ikke tom', function () {",
+                  "    pm.expect(pm.response.text()).to.not.be.empty;",
+                  "});",
+                  "pm.test('T3: Content-Type er application/json', function () {",
+                  "    pm.expect(pm.response.headers.get('Content-Type')).to.include('application/json');",
+                  "});"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "T1-T3: GET /api/cpr-name-gender-dob",
+          "request": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/cpr-name-gender-dob"
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('T1: Status er 200 OK', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "pm.test('T2: Response body er ikke tom', function () {",
+                  "    pm.expect(pm.response.text()).to.not.be.empty;",
+                  "});",
+                  "pm.test('T3: Content-Type er application/json', function () {",
+                  "    pm.expect(pm.response.headers.get('Content-Type')).to.include('application/json');",
+                  "});"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "T1-T3: GET /api/address",
+          "request": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/address"
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('T1: Status er 200 OK', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "pm.test('T2: Response body er ikke tom', function () {",
+                  "    pm.expect(pm.response.text()).to.not.be.empty;",
+                  "});",
+                  "pm.test('T3: Content-Type er application/json', function () {",
+                  "    pm.expect(pm.response.headers.get('Content-Type')).to.include('application/json');",
+                  "});"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "T1-T3: GET /api/phone",
+          "request": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/phone"
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('T1: Status er 200 OK', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "pm.test('T2: Response body er ikke tom', function () {",
+                  "    pm.expect(pm.response.text()).to.not.be.empty;",
+                  "});",
+                  "pm.test('T3: Content-Type er application/json', function () {",
+                  "    pm.expect(pm.response.headers.get('Content-Type')).to.include('application/json');",
+                  "});"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "T1-T3: GET /api/person",
+          "request": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/person"
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('T1: Status er 200 OK', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "pm.test('T2: Response body er ikke tom', function () {",
+                  "    pm.expect(pm.response.text()).to.not.be.empty;",
+                  "});",
+                  "pm.test('T3: Content-Type er application/json', function () {",
+                  "    pm.expect(pm.response.headers.get('Content-Type')).to.include('application/json');",
+                  "});"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "2. /api/cpr – specifikt",
+      "item": [
+        {
+          "name": "T4-T5: CPR nøgle, værdi og format",
+          "request": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/cpr"
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "const json = pm.response.json();",
+                  "",
+                  "// T4: Nøglen 'cpr' eksisterer",
+                  "pm.test('T4: Response indeholder nøglen cpr', function () {",
+                  "    pm.expect(json).to.have.property('cpr');",
+                  "});",
+                  "",
+                  "// T5: CPR er en ikke-tom streng med korrekt format (DDMMYY-XXXX)",
+                  "pm.test('T5: CPR-værdi er en ikke-tom streng i format DDMMYY-XXXX', function () {",
+                  "    pm.expect(json.cpr).to.be.a('string').and.not.be.empty;",
+                  "    pm.expect(json.cpr).to.match(/^\\d{6}-\\d{4}$/);",
+                  "});"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "3. /api/phone – specifikt",
+      "item": [
+        {
+          "name": "T6-T7: phoneNumber nøgle, værdi og format",
+          "request": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/phone"
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "const json = pm.response.json();",
+                  "",
+                  "// T6: Nøglen 'phoneNumber' eksisterer",
+                  "pm.test('T6: Response indeholder nøglen phoneNumber', function () {",
+                  "    pm.expect(json).to.have.property('phoneNumber');",
+                  "});",
+                  "",
+                  "// T7: Telefonnummer er en ikke-tom streng med 8 cifre",
+                  "pm.test('T7: phoneNumber er en streng med 8 cifre', function () {",
+                  "    pm.expect(json.phoneNumber).to.be.a('string').and.not.be.empty;",
+                  "    pm.expect(json.phoneNumber).to.match(/^\\d{8}$/);",
+                  "});"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "4. /api/person – specifikt",
+      "item": [
+        {
+          "name": "T8-T9: Alle felter eksisterer, er ikke null, og har korrekte typer",
+          "request": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/person"
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "const json = pm.response.json();",
+                  "",
+                  "// T8: Alle forventede top-level felter eksisterer",
+                  "pm.test('T8: Response indeholder alle forventede felter', function () {",
+                  "    const topFields = ['cpr', 'firstName', 'lastName', 'gender', 'dateOfBirth', 'address', 'phoneNumber'];",
+                  "    topFields.forEach(function (field) {",
+                  "        pm.expect(json, 'Mangler felt: ' + field).to.have.property(field);",
+                  "    });",
+                  "});",
+                  "",
+                  "// T9a: Ingen string-felter er null eller tomme",
+                  "pm.test('T9a: Ingen string-felter er null eller tomme', function () {",
+                  "    const stringFields = ['cpr', 'firstName', 'lastName', 'gender', 'dateOfBirth', 'phoneNumber'];",
+                  "    stringFields.forEach(function (field) {",
+                  "        pm.expect(json[field], field + ' er null/tom').to.be.a('string').and.not.be.empty;",
+                  "    });",
+                  "});",
+                  "",
+                  "// T9b: address er et objekt med forventede underfelter",
+                  "pm.test('T9b: address er et objekt med street, number, postalCode, townName', function () {",
+                  "    pm.expect(json.address).to.be.an('object');",
+                  "    const addrFields = ['street', 'number', 'postalCode', 'townName'];",
+                  "    addrFields.forEach(function (field) {",
+                  "        pm.expect(json.address, 'address mangler: ' + field).to.have.property(field);",
+                  "        pm.expect(json.address[field], 'address.' + field + ' er null/tom').to.not.be.null;",
+                  "    });",
+                  "});",
+                  "",
+                  "// T9c: gender er enten 'male' eller 'female'",
+                  "pm.test('T9c: gender er male eller female', function () {",
+                  "    pm.expect(json.gender).to.be.oneOf(['male', 'female']);",
+                  "});"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "5. /api/persons/{count} – ækvivalenspartitioner",
+      "item": [
+        {
+          "name": "T10: count=2 (nedre grænse, gyldig)",
+          "request": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/persons/2"
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('T10: Status er 200 OK', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "pm.test('T10: Liste indeholder præcis 2 personer', function () {",
+                  "    const json = pm.response.json();",
+                  "    pm.expect(json).to.be.an('array').with.lengthOf(2);",
+                  "});"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "T11: count=100 (øvre grænse, gyldig)",
+          "request": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/persons/100"
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('T11: Status er 200 OK', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "pm.test('T11: Liste indeholder præcis 100 personer', function () {",
+                  "    const json = pm.response.json();",
+                  "    pm.expect(json).to.be.an('array').with.lengthOf(100);",
+                  "});"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "T12: count=50 (midterværdi, gyldig)",
+          "request": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/persons/50"
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('T12: Status er 200 OK', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "pm.test('T12: Liste indeholder præcis 50 personer', function () {",
+                  "    const json = pm.response.json();",
+                  "    pm.expect(json).to.be.an('array').with.lengthOf(50);",
+                  "});"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "T13: count=0 (ugyldig, under grænse)",
+          "request": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/persons/0"
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('T13: count=0 giver 400 Bad Request', function () {",
+                  "    pm.response.to.have.status(400);",
+                  "});",
+                  "pm.test('T13: Fejlbesked er til stede', function () {",
+                  "    const json = pm.response.json();",
+                  "    pm.expect(json).to.have.property('error');",
+                  "});"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "T14: count=1 (lige under nedre grænse)",
+          "request": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/persons/1"
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('T14: count=1 giver 400 Bad Request', function () {",
+                  "    pm.response.to.have.status(400);",
+                  "});",
+                  "pm.test('T14: Fejlbesked er til stede', function () {",
+                  "    const json = pm.response.json();",
+                  "    pm.expect(json).to.have.property('error');",
+                  "});"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "T15: count=-1 (negativ)",
+          "request": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/persons/-1"
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('T15: Negativ count giver 400 Bad Request', function () {",
+                  "    pm.response.to.have.status(400);",
+                  "});",
+                  "pm.test('T15: Fejlbesked er til stede', function () {",
+                  "    const json = pm.response.json();",
+                  "    pm.expect(json).to.have.property('error');",
+                  "});"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "T16: count=101 (over øvre grænse)",
+          "request": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/persons/101"
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('T16: count=101 giver 400 Bad Request', function () {",
+                  "    pm.response.to.have.status(400);",
+                  "});",
+                  "pm.test('T16: Fejlbesked er til stede', function () {",
+                  "    const json = pm.response.json();",
+                  "    pm.expect(json).to.have.property('error');",
+                  "});"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "T17: count=999999 (ekstremt høj)",
+          "request": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/persons/999999"
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('T17: Ekstremt høj count giver 400 Bad Request', function () {",
+                  "    pm.response.to.have.status(400);",
+                  "});",
+                  "pm.test('T17: Fejlbesked er til stede', function () {",
+                  "    const json = pm.response.json();",
+                  "    pm.expect(json).to.have.property('error');",
+                  "});"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "T18: count=abc (ikke et tal)",
+          "request": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/persons/abc"
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('T18: Ikke-numerisk count giver 400 Bad Request', function () {",
+                  "    pm.response.to.have.status(400);",
+                  "});"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "T19: count mangler (/api/persons/)",
+          "request": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/persons/"
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('T19: Manglende count giver 404 Not Found', function () {",
+                  "    pm.response.to.have.status(404);",
+                  "});"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "6. Generelle controller-tests",
+      "item": [
+        {
+          "name": "T20: Ukendt endpoint → 404",
+          "request": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/unknown"
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('T20: Ukendt endpoint giver 404', function () {",
+                  "    pm.response.to.have.status(404);",
+                  "});"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "T21: Forkert HTTP-metode → 405",
+          "request": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/cpr"
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('T21: POST på GET-endpoint giver 405 Method Not Allowed', function () {",
+                  "    pm.response.to.have.status(405);",
+                  "});"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "T22: CORS-headers",
+          "request": {
+            "method": "OPTIONS",
+            "url": "{{baseUrl}}/api/cpr",
+            "header": [
+              {
+                "key": "Origin",
+                "value": "http://example.com"
+              },
+              {
+                "key": "Access-Control-Request-Method",
+                "value": "GET"
+              }
+            ]
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('T22: CORS Access-Control-Allow-Origin er til stede', function () {",
+                  "    const cors = pm.response.headers.get('Access-Control-Allow-Origin');",
+                  "    pm.expect(cors).to.exist;",
+                  "    pm.expect(cors).to.equal('*');",
+                  "});"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "T23: Hvert person-objekt i bulk-liste har alle felter",
+          "request": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/persons/5"
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('T23: Status er 200', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "",
+                  "pm.test('T23: Hvert person-objekt har alle forventede felter', function () {",
+                  "    const json = pm.response.json();",
+                  "    const fields = ['cpr', 'firstName', 'lastName', 'gender', 'dateOfBirth', 'address', 'phoneNumber'];",
+                  "    json.forEach(function (person, index) {",
+                  "        fields.forEach(function (field) {",
+                  "            pm.expect(person, 'Person ' + index + ' mangler: ' + field).to.have.property(field);",
+                  "            pm.expect(person[field], 'Person ' + index + '.' + field + ' er null').to.not.be.null;",
+                  "        });",
+                  "    });",
+                  "});"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "T24: gender er altid male eller female",
+          "request": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/persons/10"
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('T24: Alle personers gender er male eller female', function () {",
+                  "    const json = pm.response.json();",
+                  "    json.forEach(function (person, index) {",
+                  "        pm.expect(person.gender, 'Person ' + index + ' har ugyldig gender: ' + person.gender).to.be.oneOf(['male', 'female']);",
+                  "    });",
+                  "});"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
