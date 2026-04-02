@@ -13,8 +13,9 @@ mvn spring-boot:run
 
 3. frontend - bare åben 
 ```
-index.html filen der ligger i frontend mappen.
+index.html 
 ```
+filen der ligger i frontend mappen.
 
 ## Unit test af forretningslogik 
 kør 
