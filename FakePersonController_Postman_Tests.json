@@ -238,10 +238,10 @@
                   "    pm.expect(json).to.have.property('cpr');",
                   "});",
                   "",
-                  "// T5: CPR er en ikke-tom streng med korrekt format (DDMMYY-XXXX)",
-                  "pm.test('T5: CPR-værdi er en ikke-tom streng i format DDMMYY-XXXX', function () {",
+                  "// T5: CPR er en ikke-tom streng med korrekt format (DDMMYYXXXX)",
+                  "pm.test('T5: CPR-værdi er en ikke-tom streng i format DDMMYYXXXX', function () {",
                   "    pm.expect(json.cpr).to.be.a('string').and.not.be.empty;",
-                  "    pm.expect(json.cpr).to.match(/^\\d{6}-\\d{4}$/);",
+                  "    pm.expect(json.cpr).to.match(/^\\d{6}\\d{4}$/);",
                   "});"
                 ]
               }
