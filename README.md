@@ -4,11 +4,11 @@
 
 For krav specs fra Arturo se: [Kravspecifikationer](requirement_specifications.md)
 
-start docker container med MySQL database - så den er klar. 
+1. start docker container med MySQL database - så den er klar. 
 
-kør backend: mvn spring-boot:run
+2. kør backend: mvn spring-boot:run
 
-frontend - bare åben index.html filen der ligger i frontend mappen.
+3. frontend - bare åben index.html filen der ligger i frontend mappen.
 
 ## API test 
 - Der ligger en postman collection JSON fil som kan loades ind i Postman og køres samlet. 
