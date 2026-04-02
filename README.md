@@ -6,9 +6,15 @@ For krav specs fra Arturo se: [Kravspecifikationer](requirement_specifications.m
 
 1. start docker container med MySQL database - så den er klar. 
 
-2. kør backend: mvn spring-boot:run
+2. kør backend: 
+```
+mvn spring-boot:run
+```
 
-3. frontend - bare åben index.html filen der ligger i frontend mappen.
+3. frontend - bare åben 
+```
+index.html filen der ligger i frontend mappen.
+```
 
 ## Unit test af forretningslogik 
 kør 
