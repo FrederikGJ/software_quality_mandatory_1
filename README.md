@@ -10,6 +10,11 @@ For krav specs fra Arturo se: [Kravspecifikationer](requirement_specifications.m
 
 3. frontend - bare åben index.html filen der ligger i frontend mappen.
 
+## Unit test af forretningslogik 
+kør 
+```
+cd backend && mvn test
+```
 ## API test 
 - Der ligger en postman collection JSON fil som kan loades ind i Postman og køres samlet. 
 - Her er der test af vors endpoints. 
