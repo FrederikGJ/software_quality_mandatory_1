@@ -1,3 +1,32 @@
+
+/**
+ * What is being tested
+ *
+ * This Cypress end-to-end test suite verifies the main frontend functionality
+ * of the Fake Person Generator application from a user perspective.
+ *
+ * The tests simulate real user interaction with the interface by opening the page,
+ * clicking the available buttons, entering bulk values, and validating the displayed results.
+ *
+ * The test suite covers:
+ * - correct page loading
+ * - generation of CPR number
+ * - generation of name and gender
+ * - generation of name, gender and date of birth
+ * - generation of CPR, name and gender
+ * - generation of CPR, name, gender and date of birth
+ * - generation of address
+ * - generation of mobile number
+ * - generation of a full fake person
+ * - bulk generation with valid input values
+ * - validation of invalid and empty bulk input
+ *
+ * Black-box test design is used for the bulk input field,
+ * where valid and invalid partitions are tested:
+ * - valid partition: values from 2 to 100
+ * - invalid partition: values below 2, above 100, or empty input
+ */
+
 describe('Fake Person Generator E2E', () => {
     beforeEach(() => {
         cy.visit('/index.html')
@@ -83,30 +112,30 @@ describe('Fake Person Generator E2E', () => {
         cy.contains('Mobilnummer').should('be.visible')
     })
 
-    it('generates bulk persons for a valid number', () => {
-        cy.get('#bulkCount').clear().type('5')
-        cy.contains('button', 'Generer Bulk').click()
+    // Valid bulk input partition: values between 2 and 100
+    ;[2, 5, 100].forEach((count) => {
+        it(`accepts valid bulk count ${count}`, () => {
+            cy.get('#bulkCount').clear().type(String(count))
+            cy.contains('button', 'Generer Bulk').click()
 
-        cy.contains('Genereret 5 personer').should('be.visible')
-        cy.contains('Person #1').should('be.visible')
-        cy.contains('Person #5').should('be.visible')
+            cy.contains(`Genereret ${count} personer`).should('be.visible')
+            cy.contains('Person #1').should('be.visible')
+            cy.contains(`Person #${count}`).should('be.visible')
+        })
     })
 
-    it('shows error when bulk count is too low', () => {
-        cy.get('#bulkCount').clear().type('1')
-        cy.contains('button', 'Generer Bulk').click()
+    // Invalid bulk input partition: values below 2 or above 100
+    ;[1, 101].forEach((count) => {
+        it(`rejects invalid bulk count ${count}`, () => {
+            cy.get('#bulkCount').clear().type(String(count))
+            cy.contains('button', 'Generer Bulk').click()
 
-        cy.contains('Antal skal være mellem 2 og 100').should('be.visible')
+            cy.contains('Antal skal være mellem 2 og 100').should('be.visible')
+        })
     })
 
-    it('shows error when bulk count is too high', () => {
-        cy.get('#bulkCount').clear().type('101')
-        cy.contains('button', 'Generer Bulk').click()
-
-        cy.contains('Antal skal være mellem 2 og 100').should('be.visible')
-    })
-
-    it('shows error when bulk input is empty', () => {
+    // Invalid bulk input partition: empty input
+    it('rejects empty bulk input', () => {
         cy.get('#bulkCount').clear()
         cy.contains('button', 'Generer Bulk').click()
 
